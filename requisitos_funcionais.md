@@ -21,17 +21,11 @@ O app deve exibir uma tela com as informações completas da tarefa ao ser selec
 ### RF07 – Marcar/Desmarcar Tarefa como Concluída
 O sistema deve permitir alterar o status de conclusão da tarefa.
 
-### RF08 – Notificações de Tarefas
-O sistema deve permitir definir notificações para horários configurados em cada tarefa.
-
-### RF09 – Persistência Local
+### RF08 – Persistência Local
 Todas as tarefas devem ser armazenadas localmente (JSON, filesystem ou banco local).
 
-### RF10 – Criar e Gerenciar Categorias (Opcional)
+### RF09 – Criar e Gerenciar Categorias (Opcional)
 O usuário pode criar, editar e excluir categorias personalizadas.
 
-### RF11 – Exibir Data Atual na Tela Inicial
+### RF10 – Exibir Data Atual na Tela Inicial
 A tela inicial deve sempre mostrar a data atual.
-
-### RF12 – Interface Intuitiva e Navegação Simples
-O sistema deve oferecer uma navegação simples entre as telas de início, criação de tarefa e detalhes.

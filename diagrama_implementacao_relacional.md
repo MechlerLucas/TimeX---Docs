@@ -1,4 +1,4 @@
-# DER – Diagrama Entidade-Relacionamento
+# DER – Diagrama de Implementação Relacional
 
 ```mermaid
 erDiagram
