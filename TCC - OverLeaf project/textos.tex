@@ -8,17 +8,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\esp Introdução} 
 
-O Transtorno de Déficit de Atenção e Hiperatividade (TDAH), \citeonline{barkley2008} apud, é um transtorno neurobiológico caracterizado por dificuldades nas funções executivas, como planejamento, organização e autorregulação, o que frequentemente resulta em prejuízos acadêmicos, profissionais e sociais. Nesse contexto, a área de aplicativos móveis e ferramentas digitais de apoio vem se consolidando como uma alternativa promissora para auxiliar pessoas com esse perfil, oferecendo recursos que podem apoiar a organização pessoal de maneira prática e acessível.
+O Transtorno de Déficit de Atenção e Hiperatividade (TDAH), conforme discutido por \citeonline{carolo2009} citando \citeonline{barkley2008}, é um transtorno neurobiológico caracterizado por dificuldades nas funções executivas, como planejamento, organização e autorregulação, o que frequentemente resulta em prejuízos acadêmicos, profissionais e sociais. Nesse contexto, a área de aplicativos móveis e ferramentas digitais de apoio vem se consolidando como uma alternativa promissora para auxiliar pessoas com esse perfil, oferecendo recursos que podem apoiar a organização pessoal de maneira prática e acessível.
 
 Observa-se que muitos aplicativos populares de produtividade apresentam excesso de funcionalidades, menus extensos e elementos visuais que podem contribuir para a perda de foco e abandono do uso. Estudos apontam que interfaces simples, limpas e com menos estímulos tendem a favorecer o uso contínuo por pessoas com dificuldades de atenção sustentada, conforme discutido por \citeonline{knouse2022}, \citeonline{almeida2024} e \citeonline{ferreira2023}. Assim, este trabalho parte da premissa de que soluções visuais minimalistas e processos reduzidos podem ser potencialmente mais adequados para usuários que enfrentam desafios de organização diária, em alinhamento com recomendações presentes na literatura.
 
 A escolha deste tema justifica-se pela relevância social e acadêmica da proposta. Do ponto de vista social, observa-se que a maioria dos aplicativos populares de produtividade não é projetada para públicos neurodivergentes, e frequentemente apresenta excesso de menus, funções avançadas e telas densas. Para muitas pessoas com TDAH, esse excesso de elementos funciona como um fator de distração, contribuindo para a perda de foco e o abandono da ferramenta. Assim, a simplicidade torna-se não apenas desejável, mas uma estratégia essencial para reduzir a carga cognitiva durante o uso. Do ponto de vista acadêmico, este trabalho busca evidenciar como aplicações minimalistas podem ser potencialmente mais adequadas para usuários que apresentam dificuldades de foco e organização descritas na literatura sobre TDAH.
 
-Em uma análise exploratória realizada em cinco aplicativos populares de gerenciamento de tarefas, observou-se que nenhum deles oferece recursos como reforços visuais por cores para diferentes níveis de prioridade ou alertas múltiplos para uma mesma tarefa, funcionalidades apontadas na literatura como benéficas para esse público.
+Em uma análise exploratória realizada em cinco aplicativos populares de gerenciamento de tarefas: Todoist, Notion, Microsoft To Do, Trello e Google Keep, observou-se que embora sejam amplamente utilizados, esses aplicativos tendem a adotar interfaces mais densas, com múltiplos menus, diversos ícones e fluxos longos de interação, o que pode dificultar o uso por pessoas com TDAH, conforme apontado na literatura. A ausência de mecanismos de categorização simplificada e de lembretes repetidos contrasta com recomendações de design voltadas a esse público, que destacam a importância de feedbacks visuais claros e estímulos controlados, para auxiliar na organização pessoal.
 
 Portanto, este estudo pretende oferecer uma alternativa inspirada nas dificuldades relatadas na literatura e reforçadas por feedback exploratório obtido durante o desenvolvimento, como simplicidade visual, feedbacks imediatos, baixo número de etapas por ação, organização por cores e categorias claras e redução da sobrecarga cognitiva durante o uso do aplicativo.
 
-Nesse sentido, o objetivo geral deste trabalho é desenvolver um aplicativo simples de organização pessoal e gerenciamento de tempo, fundamentado em princípios de simplicidade, clareza visual e redução da carga cognitiva, elaborado com base nas dificuldades de organização e foco descritas na literatura sobre TDAH, buscando compreender como estratégias minimalistas podem auxiliar o usuário ao diminuir distrações e tornar a navegação mais direta.
+Nesse sentido, o objetivo geral deste trabalho é desenvolver uma aplicação web simples e responsivo de organização pessoal e gerenciamento de tempo, fundamentado em princípios de simplicidade, clareza visual e redução da carga cognitiva, elaborado com base nas dificuldades de organização e foco descritas na literatura sobre TDAH, buscando compreender como estratégias minimalistas podem auxiliar o usuário ao diminuir distrações e tornar a navegação mais direta.
 
 São objetivos específicos deste trabalho:
 (i) realizar uma revisão bibliográfica sobre TDAH e estratégias de organização pessoal; (ii) identificar, a partir da literatura , os requisitos funcionais e não funcionais para o aplicativo; (iii) implementar funcionalidades essenciais evitando elementos que possam gerar sobrecarga cognitiva; (iv) desenvolver um protótipo navegável do aplicativo; e (v) realizar uma avaliação preliminar utilizando de plataforma de avaliação de usabilidade.
@@ -31,13 +31,11 @@ Nesta seção são apresentados os principais conceitos que fundamentam este tra
 
 \subsection{\esp Neurodivergência e TDAH}
 
-O conceito de neurodivergência refere-se à variação natural do funcionamento neurológico humano, englobando condições como Transtorno do Espectro Autista (TEA), dislexia e TDAH. Em vez de ser compreendida apenas como um déficit ou patologia, a neurodivergência enfatiza a diversidade cognitiva como parte da condição humana. Dentro desse espectro, o TDAH é um transtorno do neurodesenvolvimento caracterizado por sintomas persistentes de desatenção, impulsividade e, em alguns casos, hiperatividade \citeonline{carolo2009}. Esses sintomas se manifestam desde a infância e podem permanecer ao longo da vida adulta, gerando impactos significativos na vida acadêmica, social e profissional dos indivíduos.
+O conceito de neurodivergência refere-se à variação natural do funcionamento neurológico humano, englobando condições como Transtorno do Espectro Autista (TEA), dislexia e TDAH. Em vez de ser compreendida apenas como um déficit ou patologia, a neurodivergência enfatiza a diversidade cognitiva como parte da condição humana. Dentro desse espectro, de acordo com \citeonline{carolo2009}, o TDAH é um transtorno do neurodesenvolvimento caracterizado por sintomas persistentes de desatenção, impulsividade e, em alguns casos, hiperatividade. Esses sintomas se manifestam desde a infância e podem permanecer ao longo da vida adulta, gerando impactos significativos na vida acadêmica, social e profissional dos indivíduos.
 
-As dificuldades mais recorrentes no TDAH estão associadas ao controle inibitório, à memória de trabalho e à autorregulação emocional, habilidades fundamentais para planejar, organizar e executar atividades diárias \citeonline{barkley2008}. Por isso, é comum que pessoas com TDAH enfrentem problemas em cumprir prazos, gerenciar rotinas, manter o foco em tarefas longas e lidar com a procrastinação. Estudos recentes reforçam que essas limitações não se explicam apenas pela falta de esforço ou disciplina, mas decorrem de diferenças estruturais e funcionais no cérebro, principalmente no córtex pré-frontal \citeonline{knouse2022}.
+Na literatura de \citeonline{barkley2008} é expresso que as dificuldades mais recorrentes no TDAH estão associadas ao controle inibitório, à memória de trabalho e à autorregulação emocional, habilidades fundamentais para planejar, organizar e executar atividades diárias. Por isso, é comum que pessoas com TDAH enfrentem problemas em cumprir prazos, gerenciar rotinas, manter o foco em tarefas longas e lidar com a procrastinação. Estudos como de \citeonline{knouse2022} reforçam que essas limitações não se explicam apenas pela falta de esforço ou disciplina, mas decorrem de diferenças estruturais e funcionais no cérebro, principalmente no córtex pré-frontal.
 
-Segundo dados nacionais, a prevalência do Transtorno do Déficit de Atenção com Hiperatividade (TDAH) no Brasil é estimada em aproximadamente 7,6\% entre crianças e adolescentes de 6 a 17 anos, passando para cerca de 5,2\% na faixa etária de 18 a 44 anos e 6,1\% nos indivíduos com 44 anos ou mais \citeonline{conitec2022}. Em âmbito global, a Associação Brasileira do Déficit de Atenção estima que a prevalência situa-se entre 5\% e 8\% da população, o que reforça a relevância social e acadêmica de desenvolver ferramentas e estratégias de apoio voltadas a esse público \citeonline{abda2022}.  
-
-Diante dessas dificuldades, torna-se necessário recorrer a soluções externas de apoio, como as tecnologias assistivas digitais, apresentadas a seguir.
+Segundo dados nacionais disponiveis em \citeonline{conitec2022}, a prevalência do Transtorno do Déficit de Atenção com Hiperatividade (TDAH) no Brasil é estimada em aproximadamente 7,6\% entre crianças e adolescentes de 6 a 17 anos, passando para cerca de 5,2\% na faixa etária de 18 a 44 anos e 6,1\% nos indivíduos com 44 anos ou mais. Em âmbito global, a Associação Brasileira do Déficit de Atenção estima que a prevalência situa-se entre 5\% e 8\% da população, o que reforça a relevância social e acadêmica de desenvolver ferramentas e estratégias de apoio voltadas a esse público.
 
 No entanto, pesquisas recentes apontam que muitos aplicativos populares de produtividade apresentam excesso de funcionalidades, menus complexos e estímulos visuais que podem prejudicar especialmente usuários que apresentam dificuldades de foco e organização, conforme discutido na literatura sobre TDAH. \citeonline{knouse2022} destacam que pessoas com TDAH tendem a abandonar ferramentas digitais quando a interface contém elementos supérfluos, pois a sobrecarga cognitiva gerada dificulta o foco e a continuidade do uso. De forma semelhante, \citeonline{almeida2024} argumentam que interfaces minimalistas, com poucos elementos por tela e fluxos curtos, favorecem a manutenção da atenção e reduzem distrações. \citeonline{ferreira2023} reforça que a simplicidade não é apenas uma preferência estética, mas um requisito essencial para reduzir a carga cognitiva e promover maior clareza durante o uso.
 
@@ -59,7 +57,9 @@ No contexto do TDAH, essas heurísticas ganham importância especial. Por exempl
 
 Assim, o desenvolvimento de aplicações voltadas a pessoas com TDAH deve alinhar-se a essas heurísticas, garantindo interfaces simples, coerentes e acessíveis.
 
-Pesquisas recentes indicam que o design de interfaces deve privilegiar a simplicidade, a consistência visual e a clareza de instruções \citeonline{almeida2024}. No contexto do TDAH, recomenda-se evitar excesso de estímulos, utilizar cores para organizar prioridades e criar lembretes múltiplos para uma mesma atividade. A remoção de elementos que pouco contribuem para a eficácia, como o botão de “soneca” em alarmes, também se mostra relevante, uma vez que pode induzir à procrastinação. Essas práticas visam reduzir a carga cognitiva do usuário, facilitando a interação com o aplicativo.
+Pesquisas recentes, como \citeonline{almeida2024}, indicam que o design de interfaces deve privilegiar a simplicidade, a consistência visual e a clareza de instruções. No contexto do TDAH, recomenda-se evitar excesso de estímulos, utilizar cores para organizar prioridades e criar lembretes múltiplos para uma mesma atividade. A remoção de elementos que pouco contribuem para a eficácia, como o botão de “soneca” em alarmes, também se mostra relevante, uma vez que pode induzir à procrastinação. Essas práticas visam reduzir a carga cognitiva do usuário, facilitando a interação com o aplicativo.
+
+Com base nessas recomendações, diversos princípios foram incorporados ao desenvolvimento do TimeX. A partir das heurísticas de \citeonline{nielsen1994} e das diretrizes de design para pessoas com TDAH discutidas por \citeonline{knouse2022}, \citeonline{ferreira2023} e \citeonline{almeida2024}, o protótipo adotou um conjunto de escolhas projetuais voltadas à redução da carga cognitiva. Entre elas, destacam-se o design minimalista, a organização das tarefas por categorias visuais simplificadas, a redução de menus e etapas de navegação, o fornecimento de feedbacks imediatos, mecanismos de prevenção de erros e a manutenção de consistência visual entre todas as telas. Tais decisões aproximam o protótipo das melhores práticas identificadas na literatura, reforçando sua adequação ao público-alvo.
 
 Portanto, observa-se que a integração entre conceitos de neurodivergência, tecnologias digitais de apoio e usabilidade fornece um alicerce sólido para o desenvolvimento de soluções voltadas às dificuldades de organização associadas ao TDAH. O domínio desses fundamentos permite compreender as necessidades específicas discutidas na literatura e direcionar esforços de design e implementação para aplicativos mais claros, funcionais e coerentes com essas recomendações.
 
@@ -89,6 +89,16 @@ A metodologia adotada neste trabalho é de natureza aplicada e de desenvolviment
 
 O estudo é classificado como aplicado, pois busca gerar uma solução prática fundamentada em bases teóricas. É também exploratório e descritivo, ao investigar as necessidades do público-alvo e descrever o processo de desenvolvimento da aplicação.
 
+\subsection{Levantamento inicial com usuário}
+
+Antes da implementação do protótipo, foi realizada uma consulta exploratória com um usuário diagnosticado com TDAH, com o objetivo de identificar dificuldades reais de organização, expectativas em relação ao aplicativo e funcionalidades consideradas úteis para seu cotidiano. As anotações obtidas nessa etapa contribuíram diretamente para a definição dos requisitos funcionais e não funcionais do sistema.
+
+Durante a conversa, o usuário mencionou a necessidade de recursos que ajudassem a “fazer um pit stop para o cérebro”, indicando a importância de momentos estruturados para reorganizar prioridades. Também destacou o uso frequente de despertadores no celular, sugerindo que o aplicativo deveria permitir alertas antecipados de uma tarefa, com notificações repetidas até o horário de execução, e recomendou a remoção da função soneca, por considerar que ela atrapalha sua atenção.
+
+Outras sugestões incluíram: exibir notas da tarefa junto ao despertador; utilizar um sistema de cores para facilitar a identificação rápida das prioridades; criar checklists simples; e experimentar variações pequenas de horário em lembretes recorrentes (por exemplo, alertas entre 3h30 e 4h00 para compromissos das 4h00). O usuário também mencionou interesse em recursos como integração com assistentes virtuais, indicando caminhos potenciais para versões futuras do sistema.
+
+Essas contribuições foram fundamentais para a definição do escopo inicial do TimeX, orientando a priorização de funcionalidades simples, visuais e focadas na redução da carga cognitiva.
+
 \subsection{Etapas de desenvolvimento}
 
 O processo de desenvolvimento foi dividido em etapas principais:
@@ -96,9 +106,9 @@ O processo de desenvolvimento foi dividido em etapas principais:
 \begin{enumerate}[label=\alph*)]
     \item Revisão bibliográfica: Pesquisa em bases acadêmicas como Scielo, Google Scholar e ACM Digital Library, com foco em TDAH, tecnologias assistivas e usabilidade \cite{barkley2008,nielsen1994,norman2013,almeida2024,ferreira2023}.
     
-    \item Definição de requisitos: Os requisitos funcionais e não funcionais foram definidos com base na literatura e na análise de aplicativos similares, priorizando simplicidade, clareza e redução de distrações.
+    \item Definição de requisitos: Os requisitos funcionais e não funcionais foram definidos com base na literatura, na análise de aplicativos similares e em contribuições obtidas por meio de uma consulta exploratória com um usuário diagnosticado com TDAH, priorizando simplicidade, clareza e redução de distrações.
     
-    \item Design da interface: A interface foi projetada segundo os princípios de usabilidade de \citeonline{nielsen1994} e design centrado no usuário de \citeonline{norman2013}. Adotou-se o conceito \textit{mobile-first}, com layout limpo e intuitivo. Utilizou-se Tailwind CSS \cite{tailwindcss}, Shadcn/UI, Framer Motion e Lucide React.
+    \item Design da interface: A interface foi projetada segundo os princípios de usabilidade de \citeonline{nielsen1994} e do design centrado no usuário de \citeonline{norman2013}, incorporando também recomendações específicas para o público com TDAH discutidas por \citeonline{almeida2024}, \citeonline{ferreira2023} e \citeonline{knouse2022}. Essas diretrizes enfatizam simplicidade visual, redução de estímulos desnecessários, navegação linear e organização clara das informações, elementos essenciais para minimizar a carga cognitiva desse público. Assim, adotou-se um design \textit{mobile-first} com layout limpo, contrastes controlados e categorização visual simplificada. Para garantir consistência e acessibilidade, foram utilizadas ferramentas como Tailwind CSS \cite{tailwindcss}, Shadcn/UI, Framer Motion e Lucide React, que permitiram criar uma interface leve, responsiva e alinhada às recomendações encontradas na literatura sobre usabilidade para usuários com TDAH.
     
     \item Implementação: O frontend foi desenvolvido em React.js \cite{react}, com gerenciamento de estado por React Query e navegação com React Router DOM. O backend foi construído localmente em Node.js com Express.js \cite{expressjs}, utilizando arquivos JSON para persistência de dados e estrutura de rotas REST.
     
@@ -108,49 +118,49 @@ O processo de desenvolvimento foi dividido em etapas principais:
 Além disso, foi obtido um feedback exploratório de um usuário diagnosticado com TDAH, que testou o protótipo de forma informal, contribuindo com observações qualitativas consideradas posteriormente na discussão dos resultados.
 
 
-\subsection{Ambiente de desenvolvimento}
+% \subsection{Ambiente de desenvolvimento}
 
-O ambiente de desenvolvimento foi configurado localmente utilizando o Visual Studio Code e o Node.js. As dependências foram gerenciadas via NPM e o projeto estruturado em pastas separadas para frontend e backend. A Quadro~\ref{tab:tecnologias} apresenta as principais ferramentas utilizadas.
+% O ambiente de desenvolvimento foi configurado localmente utilizando o Visual Studio Code e o Node.js. As dependências foram gerenciadas via NPM e o projeto estruturado em pastas separadas para frontend e backend. A Quadro~\ref{tab:tecnologias} apresenta as principais ferramentas utilizadas.
 
 
-\begin{quadro}[H]
-\centering
-\caption{Tecnologias utilizadas no desenvolvimento do aplicativo TimeX}
-\label{tab:tecnologias}
-\renewcommand{\arraystretch}{1.3}
+% \begin{quadro}[H]
+% \centering
+% \caption{Tecnologias utilizadas no desenvolvimento do aplicativo TimeX}
+% \label{tab:tecnologias}
+% \renewcommand{\arraystretch}{1.3}
 
-\footnotesize
+% \footnotesize
 
-\begin{tabular}{p{4cm} p{10cm}}
-\hline
-Tecnologia/Ferramenta & Descrição resumida \\
-\hline
-React.js & Biblioteca JavaScript para construção de interfaces de usuário. \\
-\hline
-Tailwind CSS & Framework CSS utilitário para estilização responsiva. \\
-\hline
-Shadcn/UI & Conjunto de componentes acessíveis baseados em Tailwind CSS. \\
-\hline
-Framer Motion & Biblioteca de animação para React. \\
-\hline
-Lucide React & Pacote de ícones vetoriais leves. \\
-\hline
-React Router DOM & Gerenciador de rotas e navegação. \\
-\hline
-React Query & Gerenciamento de estado e cache de requisições assíncronas. \\
-\hline
-date-fns & Manipulação e formatação de datas. \\
-\hline
-Express.js & Framework para criação de APIs REST locais em Node.js. \\
-\hline
-Node.js & Ambiente de execução JavaScript no servidor. \\
-\hline
-Visual Studio Code & Ambiente de desenvolvimento integrado (IDE). \\
-\hline
-\end{tabular}
-\fonte{Elaborado pelos autores.}
+% \begin{tabular}{p{4cm} p{10cm}}
+% \hline
+% Tecnologia/Ferramenta & Descrição resumida \\
+% \hline
+% React.js & Biblioteca JavaScript para construção de interfaces de usuário. \\
+% \hline
+% Tailwind CSS & Framework CSS utilitário para estilização responsiva. \\
+% \hline
+% Shadcn/UI & Conjunto de componentes acessíveis baseados em Tailwind CSS. \\
+% \hline
+% Framer Motion & Biblioteca de animação para React. \\
+% \hline
+% Lucide React & Pacote de ícones vetoriais leves. \\
+% \hline
+% React Router DOM & Gerenciador de rotas e navegação. \\
+% \hline
+% React Query & Gerenciamento de estado e cache de requisições assíncronas. \\
+% \hline
+% date-fns & Manipulação e formatação de datas. \\
+% \hline
+% Express.js & Framework para criação de APIs REST locais em Node.js. \\
+% \hline
+% Node.js & Ambiente de execução JavaScript no servidor. \\
+% \hline
+% Visual Studio Code & Ambiente de desenvolvimento integrado (IDE). \\
+% \hline
+% \end{tabular}
+% \fonte{Elaborado pelos autores.}
 
-\end{quadro}
+% \end{quadro}
 
 
 
@@ -164,7 +174,7 @@ Esta seção apresenta os principais resultados obtidos com o desenvolvimento do
 
 O \textit{TimeX} foi desenvolvido como um aplicativo web com arquitetura modular composta por uma interface em React.js e um backend local em Node.js e Express.js. A persistência de dados é realizada por meio de arquivos JSON, garantindo independência de servidores externos e facilitando a validação local do protótipo.
 
-O processo de implementação seguiu os princípios do design centrado no usuário \citeonline{norman2013}, priorizando simplicidade, clareza e redução de elementos visuais que possam gerar sobrecarga cognitiva. Tecnologias como Tailwind CSS, Shadcn/UI e Framer Motion foram empregadas para garantir consistência visual, responsividade e transições suaves. A categorização por cores, inspirada em recomendações de design inclusivo, foi utilizada para auxiliar o reconhecimento imediato das informações \citeonline{almeida2024}.
+O processo de implementação seguiu os princípios do design centrado no usuário \citeonline{norman2013}, priorizando simplicidade, clareza e redução de elementos visuais que possam gerar sobrecarga cognitiva. Tecnologias como Tailwind CSS, Shadcn/UI e Framer Motion foram empregadas para garantir consistência visual, responsividade e transições suaves. A categorização por cores, aplicada de forma controlada para evitar estímulos excessivos, foi utilizada para auxiliar o reconhecimento imediato.\citeonline{almeida2024}.
 
 As Figuras~\ref{fig:tela-inicial}, \ref{fig:nova-tarefa} e \ref{fig:detalhes-tarefa} respectivamente, apresentam as três principais telas do aplicativo: Tela Inicial, Nova Tarefa e Detalhes da Tarefa, ilustrando a estrutura visual e os elementos fundamentais da interface.
 
@@ -202,27 +212,27 @@ A documentação completa também está disponível em um repositório próprio\
 
 \subsection{Avaliação Heurística de Usabilidade}
 
-Antes da análise heurística, apresenta-se, na Tabela~\ref{tab:lista-heuristicas}, a lista das dez heurísticas propostas por \citeonline{nielsen1994}, que serviram como referência para a avaliação das telas do aplicativo.
+% Antes da análise heurística, apresenta-se, na Tabela~\ref{tab:lista-heuristicas}, a lista das dez heurísticas propostas por \citeonline{nielsen1994}, que serviram como referência para a avaliação das telas do aplicativo.
 
-\begin{quadro}[H]
-\centering
-\caption{Lista das 10 Heurísticas de Nielsen (1994)}
-\footnotesize
-\label{tab:lista-heuristicas}
-\begin{tabular}{|p{1.2cm}|p{13cm}|}
-\hline
-\textbf{H1} & \textbf{Visibilidade do status do sistema:} Manter o usuário sempre informado sobre o que está acontecendo por meio de feedback apropriado. \\ \hline
-\textbf{H2} & \textbf{Correspondência entre o sistema e o mundo real:} Utilizar linguagem, metáforas e elementos familiares ao usuário. \\ \hline
-\textbf{H3} & \textbf{Controle e liberdade do usuário:} Permitir que o usuário desfaça ações e retorne sem prejuízo. \\ \hline
-\textbf{H4} & \textbf{Consistência e padrões:} Manter uniformidade visual, textual e funcional em toda a interface. \\ \hline
-\textbf{H5} & \textbf{Prevenção de erros:} Reduzir a probabilidade de erros e, quando possível, solicitar confirmações antes de ações críticas. \\ \hline
-\textbf{H6} & \textbf{Reconhecimento em vez de memorização:} Tornar opções visíveis, minimizando a carga de memória do usuário. \\ \hline
-\textbf{H7} & \textbf{Flexibilidade e eficiência de uso:} Atender tanto usuários iniciantes quanto experientes, oferecendo atalhos e uso ágil. \\ \hline
-\textbf{H8} & \textbf{Design estético e minimalista:} Evitar excesso de informações, priorizando clareza e foco. \\ \hline
-\textbf{H9} & \textbf{Ajuda no diagnóstico e correção de erros:} Mensagens de erro devem ser claras, indicando causas e soluções. \\ \hline
-\textbf{H10} & \textbf{Ajuda e documentação:} Disponibilizar documentação clara, breve e acessível, quando necessária. \\ \hline
-\end{tabular}
-\end{quadro}
+% \begin{quadro}[H]
+% \centering
+% \caption{Lista das 10 Heurísticas de Nielsen (1994)}
+% \footnotesize
+% \label{tab:lista-heuristicas}
+% \begin{tabular}{|p{1.2cm}|p{13cm}|}
+% \hline
+% \textbf{H1} & \textbf{Visibilidade do status do sistema:} Manter o usuário sempre informado sobre o que está acontecendo por meio de feedback apropriado. \\ \hline
+% \textbf{H2} & \textbf{Correspondência entre o sistema e o mundo real:} Utilizar linguagem, metáforas e elementos familiares ao usuário. \\ \hline
+% \textbf{H3} & \textbf{Controle e liberdade do usuário:} Permitir que o usuário desfaça ações e retorne sem prejuízo. \\ \hline
+% \textbf{H4} & \textbf{Consistência e padrões:} Manter uniformidade visual, textual e funcional em toda a interface. \\ \hline
+% \textbf{H5} & \textbf{Prevenção de erros:} Reduzir a probabilidade de erros e, quando possível, solicitar confirmações antes de ações críticas. \\ \hline
+% \textbf{H6} & \textbf{Reconhecimento em vez de memorização:} Tornar opções visíveis, minimizando a carga de memória do usuário. \\ \hline
+% \textbf{H7} & \textbf{Flexibilidade e eficiência de uso:} Atender tanto usuários iniciantes quanto experientes, oferecendo atalhos e uso ágil. \\ \hline
+% \textbf{H8} & \textbf{Design estético e minimalista:} Evitar excesso de informações, priorizando clareza e foco. \\ \hline
+% \textbf{H9} & \textbf{Ajuda no diagnóstico e correção de erros:} Mensagens de erro devem ser claras, indicando causas e soluções. \\ \hline
+% \textbf{H10} & \textbf{Ajuda e documentação:} Disponibilizar documentação clara, breve e acessível, quando necessária. \\ \hline
+% \end{tabular}
+% \end{quadro}
 
 O detalhamento abaixo sintetiza os resultados da análise heurística realizada a partir das diretrizes de \citeonline{nielsen1994}.
 
@@ -237,8 +247,6 @@ O detalhamento abaixo sintetiza os resultados da análise heurística realizada 
     \item \textbf{H7 – Flexibilidade e eficiência:} Filtros por cor permitem navegação rápida.
     \item \textbf{H8 – Estética e design minimalista:} Layout limpo, com ênfase nos elementos essenciais.
 \end{itemize}
-
-\newpage
 
 \subsubsection*{Tela Nova Tarefa}
 
@@ -261,12 +269,17 @@ O detalhamento abaixo sintetiza os resultados da análise heurística realizada 
     \item \textbf{H8 – Estética minimalista:} Exibe apenas informações essenciais ao usuário.
 \end{itemize}
 
-
-A análise confirmou que o \textit{TimeX} apresenta alto nível de aderência às heurísticas fundamentais: visibilidade do status (H1), metáforas compreensíveis (H2), consistência visual (H4), reconhecimento em vez de memorização (H6) e design minimalista (H8). Esses aspectos são essenciais para reduzir a sobrecarga cognitiva, conforme discutido na literatura sobre TDAH.
+A análise heurística realizada sugere que o \textit{TimeX} apresenta boa aderência às heurísticas fundamentais, especialmente em relação à visibilidade do status (H1), ao uso de metáforas compreensíveis (H2), à consistência visual (H4), ao reconhecimento em vez de memorização (H6) e ao design minimalista (H8). Esses elementos indicam alinhamento inicial com recomendações voltadas à redução da sobrecarga cognitiva, conforme discutido na literatura sobre TDAH. Entretanto, por se tratar de uma avaliação qualitativa baseada somente na inspeção das telas, tais resultados devem ser interpretados como indicativos, e não conclusivos, uma vez que não foi realizada validação quantitativa ou testes controlados com usuários.
 
 \subsubsection{Impressões iniciais de um usuário com TDAH}
 
-Durante o desenvolvimento do protótipo, foram coletadas impressões iniciais de um usuário que realizou um teste exploratório do TimeX. Esse usuário, diagnosticado com TDAH, ofereceu contribuições particularmente relevantes, pois suas percepções dialogam diretamente com o perfil descrito na literatura. Entre os pontos positivos, destacou o layout simples e a divisão de categorias, que facilitaram a visualização das tarefas. Por outro lado, sugeriu que o alarme fosse mais intrusivo, argumentando que lembretes pouco chamativos tendem a passar despercebidos. Outro ponto observado foi a marcação automática de tarefas atrasadas como concluídas, o que dificultou a distinção entre atividades realmente realizadas e atividades pendentes. O usuário sugeriu a existência de um estado “não feita” ou “atrasada”, bem como a possibilidade de reagendar automaticamente tarefas não concluídas para o dia seguinte, recurso presente em outros aplicativos. Contudo, destacou que essa funcionalidade deve considerar tarefas com periodicidade fixa, para evitar inconsistências. Esse feedback reforça aspectos discutidos nas heurísticas e evidencia oportunidades práticas de melhoria no protótipo.
+Durante o desenvolvimento do protótipo, foram coletadas impressões iniciais de um usuário diagnosticado com TDAH, que já havia contribuído anteriormente na fase de levantamento de requisitos. Sua participação foi fundamental tanto para orientar funcionalidades essenciais quanto para avaliar a clareza e adequação do protótipo.
+
+Entre os aspectos positivos, o usuário destacou o layout simples, a divisão clara das categorias e a organização visual das tarefas, elementos que facilitaram a compreensão das informações. No entanto, apontou que o alarme deveria ser mais intrusivo, uma vez que lembretes pouco chamativos tendem a passar despercebidos, especialmente para pessoas com TDAH. Esse ponto dialoga com suas sugestões iniciais sobre notificações repetidas e reforços mais evidentes.
+
+Outro problema identificado foi a marcação automática de tarefas atrasadas como concluídas, o que dificultou a distinção entre atividades realmente realizadas e pendentes. O usuário sugeriu a inclusão de um estado intermediário, como “não feita” ou “atrasada”, bem como a possibilidade de reagendar automaticamente tarefas não concluídas para o dia seguinte. Ressaltou, contudo, que esse reagendamento deveria respeitar tarefas com periodicidade fixa, para evitar inconsistências.
+
+Essas impressões reforçam pontos discutidos nas heurísticas de usabilidade e evidenciam oportunidades práticas de melhoria no protótipo, especialmente no que diz respeito à clareza dos feedbacks e ao comportamento das tarefas em diferentes estados.
 
 
 \subsection{Discussão dos Resultados}
@@ -283,7 +296,7 @@ Assim, os resultados mostram que é possível conciliar simplicidade técnica, u
 
 \section{Conclusão}
 
-Este trabalho teve como objetivo desenvolver o aplicativo \textit{TimeX}, um protótipo simples de organização pessoal voltado ao apoio de usuários que apresentam dificuldades de foco e planejamento descritas na literatura sobre TDAH. A proposta buscou demonstrar que aplicativos minimalistas podem ser potencialmente mais adequados para esse perfil de usuário quando comparados a ferramentas tradicionais de produtividade que apresentam excesso de funcionalidades.
+Este trabalho teve como objetivo desenvolver um protótipo simples de aplicação web de organização pessoal voltado ao apoio de usuários que apresentam dificuldades de foco e planejamento descritas na literatura sobre TDAH. A proposta buscou demonstrar que aplicações minimalistas podem ser mais adequados para esse perfil de usuário quando comparados a ferramentas tradicionais de produtividade que apresentam excesso de funcionalidades.
 
 O \textit{TimeX} foi implementado com foco na simplicidade visual, na clareza de uso e na redução da carga cognitiva durante as interações. As funcionalidades desenvolvidas, como alarmes configuráveis, categorização por cores e lembretes automáticos, foram projetadas com base em recomendações da literatura, buscando tornar o uso mais direto e reduzir elementos que possam gerar distrações. A interface adota uma abordagem minimalista e intuitiva. A avaliação heurística de usabilidade confirmou que o sistema apresenta boa conformidade com os princípios de design centrado no usuário, indicando que o protótipo é funcional e coerente com os objetivos definidos para esta etapa. Além disso, considerou-se o feedback exploratório de um usuário diagnosticado com TDAH, cujas impressões destacaram tanto aspectos positivos da experiência quanto sugestões de melhoria, reforçando pontos relevantes observados durante a análise.
 
